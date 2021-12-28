@@ -1,0 +1,4 @@
+npm init svelte@next svelte-bible
+cd svelte-bible
+npm i
+cd run dev
