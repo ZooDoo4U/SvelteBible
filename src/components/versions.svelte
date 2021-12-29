@@ -24,7 +24,7 @@
 
 <span class='SelectorLabel'>  
       Version: 
-        <select  on:change={versionChanged} on:wheel|preventDefault={(e)=>{WheelScroll(e,versionChanged)}} class='selectionList'>   
+        <select id='versions' on:change={versionChanged} on:wheel|preventDefault={(e)=>{WheelScroll(e,versionChanged)}} class='selectionList'>   
       {#each $BibleVersions  as v }
           <option class='selectionList'>{v}</option>
       {/each}                

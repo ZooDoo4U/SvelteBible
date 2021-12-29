@@ -22,7 +22,7 @@
   </script>
    
 <span class="SelectorLabel">Chapter ({$BibleChapters.length}):
-  <select on:change={(e) => ChapterChanged(e)} on:wheel|preventDefault={(e)=>{WheelScroll(e,ChapterChanged)}} class='selectionList'>
+  <select id='chapters'  on:change={(e) => ChapterChanged(e)} on:wheel|preventDefault={(e)=>{WheelScroll(e,ChapterChanged)}} class='selectionList'>
     {#each $BibleChapters as chapter}
         <option class='selectionList'>{chapter}</option>        
     {/each}

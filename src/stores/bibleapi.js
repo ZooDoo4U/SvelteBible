@@ -47,14 +47,13 @@ export const GetVerseText = async (version, book, chapter) =>
     catch
     {
         //
-        //  This shouldn't happen any more...  On Book change we set the current chapter to 1.
+        //  This shouldn't happen any more...  (ah but it does...) 
+        //  On Book change we set the current chapter to 1.
         //
         
         //  most often this will catch if...  The use is looking at a book/chapter 
         //  that has 'say 20 chaptes and looking at say chapter 15. <BUT>...  The next chapter they scroll to
-        //  only had 5, so we can't get chapter 15 when 5 is max...   So we just set the Current chapter to 1
-        //  and refetch...  (simple ;) 
-        alert('ouch...')
+        //  only had 5, so we can't get chapter 15 when 5 is max...   So we just set the Current chapter to 1      
         $CurrentChapter  =1; 
         let data = (await axios.get(`${bibleUrl}/${version}/ReadAllVersesInChapter/${book}/${1}`)).data;
         BibleVerses.set(data);

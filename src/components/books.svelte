@@ -30,7 +30,7 @@
 </script>
  
   <span class='SelectorLabel'>Books:
-    <select on:change={(e) =>BookChanged(e)} on:wheel|preventDefault={(e)=>{WheelScroll(e,BookChanged)}} class='selectionList'>
+    <select id='books' on:change={(e) =>BookChanged(e)} on:wheel|preventDefault={(e)=>{WheelScroll(e,BookChanged)}} class='selectionList'>
       {#each $BibleBooks as book}
           <option class='selectionList'>{book}</option>        
       {/each}
